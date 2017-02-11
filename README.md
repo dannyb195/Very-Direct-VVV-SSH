@@ -3,6 +3,8 @@ This repo provides instructions on allowing for directly ssh-ing into VVV to you
 
 #### Note these instruction have only been tested with VVV (https://github.com/Varying-Vagrant-Vagrants/VVV)
 
+##### Thank you to Ben Lobaugh (https://twitter.com/benlobaugh) and Brad Parbs (https://twitter.com/bradparbs) for pointing me in the right direction
+
 ## Step 1 (local):
 If you do not already have a `bin` dir in your $HOME locally create one:
 
