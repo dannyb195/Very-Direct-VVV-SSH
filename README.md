@@ -25,8 +25,8 @@ Open you newly create file in your favorite editor, or VIM and paste
 ```
 #!/bin/bash
 local_path=$(pwd);
-local_path=${local_path##*www/}; # http://stackoverflow.com/questions/19482123/extract-part-of-a-string-using-bash-cut-split
-ssh -t <sshuser>@<domain>.<extension> "export LOCAL=$local_path; bash"
+local_path=${local_path##*www/}; #http://stackoverflow.com/questions/19482123/extract-part-of-a-string-using-bash-cut-split
+ssh -t vagrant@vvv.dev "cd /srv/www/${local_path}; bash";
 ```
 
 ## Step IV (local):
@@ -41,4 +41,4 @@ After ssh-ing in you *should* be in your users home directory, if not simply `cd
 ## Step G (remote server):
 Open ~/.bashrc in your favorite editor and paste `cd /srv/www/$LOCAL`
 
-Now when (in VVV) you are in a project such as `<your-local>/www/<project-name>/wp-content/plugins` and you run the bash script by typing the name you chose earlier you *should* be taken directly to `/srv/www/<project-name>/wp-content/plugins` within vagrant. 
+Now when (in VVV) you are in a project such as `<your-local>/www/<project-name>/wp-content/plugins` and you run the bash script by typing the name you chose earlier you *should* be taken directly to `/srv/www/<project-name>/wp-content/plugins` within vagrant.
